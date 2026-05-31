@@ -1,21 +1,25 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #101010;
+  background: radial-gradient(circle at top, #1b1b1b 0%, #050505 70%);
   color: white;
 }
 
 header {
   text-align: center;
   padding: 2rem;
-  background: #1c1c1c;
-  border-bottom: 2px solid gold;
+  background: linear-gradient(#111, #000);
+  border-bottom: 3px solid #d6b400;
+  text-shadow: 0 0 8px #d6b400;
+}
+
+header h1 {
+  font-family: Georgia, serif;
+  letter-spacing: 2px;
 }
 
 main {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: auto;
+  padding: 1.5rem;
 }
 
 #searchBox {
@@ -23,48 +27,40 @@ main {
   padding: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
-  border-radius: 10px;
-  border: none;
+  border-radius: 4px;
+  border: 2px solid #d6b400;
+  background: #050505;
+  color: white;
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-  background: #222;
-  color: white;
-  text-decoration: none;
-  padding: 0.75rem;
-  border-radius: 12px;
+  background: linear-gradient(#262626, #111);
+  border: 2px solid #6f5b00;
+  box-shadow: 0 0 12px rgba(214, 180, 0, 0.4);
+  border-radius: 8px;
+  padding: 1rem;
   text-align: center;
-  border: 1px solid #444;
-}
-
-.card:hover {
-  border-color: gold;
-  transform: scale(1.03);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
+  max-width: 230px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px black;
 }
 
 .card h2 {
-  font-size: 1rem;
+  font-family: Georgia, serif;
+  color: #ffd700;
+  text-shadow: 0 0 5px black;
 }
 
-.missing-img {
-  height: 220px;
-  display: grid;
-  place-items: center;
-  background: #333;
-  border-radius: 8px;
-  color: #aaa;
-}
 .effect-box {
   margin-top: 0.75rem;
   text-align: left;
@@ -74,16 +70,10 @@ main {
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  color: gold;
-  list-style: none;
-}
-
-.effect-box summary::-webkit-details-marker {
-  display: none;
+  color: #ffd700;
 }
 
 .effect-box p {
-  margin-top: 0.75rem;
   font-size: 0.9rem;
   line-height: 1.35;
 }
