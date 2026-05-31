@@ -26,9 +26,10 @@ fetch("cards.json")
           DEF ${card.def}
         </p>
 
-        <p>
-          ${card.effect}
-        </p>
+        <details class="effect-box">
+  <summary>Effect ˅</summary>
+  <p>${card.effect}</p>
+</details>
       `;
 
       cardGrid.appendChild(cardElement);
