@@ -105,3 +105,6 @@ main {
 .discord-link {
   color: #8ea1ff;
 }
+{
+    box-sizing: border-box;
+}
