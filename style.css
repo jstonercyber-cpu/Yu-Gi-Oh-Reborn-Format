@@ -77,3 +77,31 @@ main {
   font-size: 0.9rem;
   line-height: 1.35;
 }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  background: linear-gradient(#1d3b52, #0c1e2a);
+  border-top: 2px solid #d6b400;
+  border-bottom: 2px solid #d6b400;
+}
+
+.main-nav a {
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  border-right: 1px solid rgba(255,255,255,.15);
+  transition: 0.2s;
+}
+
+.main-nav a:hover {
+  background: rgba(214,180,0,.15);
+  color: #ffd700;
+}
+
+.discord-link {
+  color: #8ea1ff;
+}
