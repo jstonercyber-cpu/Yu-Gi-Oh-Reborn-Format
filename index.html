@@ -9,27 +9,15 @@
 <body>
   <header>
     <h1>Yu-Gi-Oh Cube Library</h1>
-    <p>Browse the Reborn Format card pool.</p>
+    <p>Search the Reborn Format card pool.</p>
   </header>
 
   <main>
-    <section class="controls">
-      <input type="text" placeholder="Search cards..." />
-      <select>
-        <option>All Cards</option>
-        <option>Monsters</option>
-        <option>Spells</option>
-        <option>Traps</option>
-      </select>
-    </section>
+    <input id="searchBox" type="text" placeholder="Search cards..." />
 
-    <section class="card-grid">
-      <div class="card">
-        <img src="images/example-card.jpg" alt="Example Card" />
-        <h2>Example Card</h2>
-        <p>Monster</p>
-      </div>
-    </section>
+    <section id="cardGrid" class="card-grid"></section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
