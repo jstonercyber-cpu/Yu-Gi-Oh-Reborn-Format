@@ -6,7 +6,7 @@ fetch("cards.json")
     cards.forEach(card => {
 
       const imagePath =
-        `images/monsters/${card.name.replaceAll(" ", "_")}.jpg`;
+        `Images/Monsters/${card.name.replaceAll(" ", "_")}.jpg`;
 
       const cardElement = document.createElement("div");
 
