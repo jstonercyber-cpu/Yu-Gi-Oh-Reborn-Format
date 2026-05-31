@@ -31,6 +31,7 @@ main {
   border: 2px solid #d6b400;
   background: #050505;
   color: white;
+  box-sizing: border-box;
 }
 
 .card-grid {
@@ -104,7 +105,4 @@ main {
 
 .discord-link {
   color: #8ea1ff;
-}
-{
-    box-sizing: border-box;
 }
