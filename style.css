@@ -65,3 +65,25 @@ main {
   border-radius: 8px;
   color: #aaa;
 }
+.effect-box {
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+.effect-box summary {
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  color: gold;
+  list-style: none;
+}
+
+.effect-box summary::-webkit-details-marker {
+  display: none;
+}
+
+.effect-box p {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
