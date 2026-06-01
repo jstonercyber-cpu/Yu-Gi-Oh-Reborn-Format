@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yu-Gi-Oh Reborn Format</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
   <div id="background-rotator"></div>
@@ -22,11 +22,53 @@
   <a href="https://discord.gg/yAHuqNZZZV" class="discord-link" target="_blank">Discord</a>
 </nav>
   <main>
-    <input id="searchBox" type="text" placeholder="Search cards..." />
+  <section class="search-panel">
+    <div class="search-row">
+      <input id="searchBox" type="text" placeholder="Search cards..." />
+      <button id="searchButton">Search</button>
+    </div>
 
-    <section id="cardGrid" class="card-grid"></section>
-  </main>
+    <div class="filter-row">
+      <select id="sortSelect">
+        <option value="name">Alphabetical</option>
+        <option value="atk">Attack</option>
+        <option value="def">Defense</option>
+        <option value="attribute">Attribute</option>
+        <option value="race">Race</option>
+        <option value="monsterType">Monster Type</option>
+        <option value="level">Level</option>
+      </select>
 
-  <script src="script.js?v=2"></script>
+      <select id="directionSelect">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+
+      <select id="attributeFilter">
+        <option value="">All Attributes</option>
+      </select>
+
+      <select id="monsterTypeFilter">
+        <option value="">Normal & Effect</option>
+        <option value="Normal">Normal</option>
+        <option value="Effect">Effect</option>
+      </select>
+
+      <select id="raceFilter">
+        <option value="">All Races</option>
+      </select>
+
+      <select id="levelFilter">
+        <option value="">All Levels</option>
+      </select>
+
+      <button id="clearButton">Clear</button>
+    </div>
+  </section>
+
+  <section id="cardGrid" class="card-grid"></section>
+</main>
+
+  <script src="script.js?v=4"></script>
 </body>
 </html>
