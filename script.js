@@ -14,6 +14,7 @@ fetch("cards.json")
 
       cardElement.innerHTML = `
         <img src="${imagePath}" alt="${card.name}">
+
         <h2>${card.name}</h2>
 
         <p>
@@ -22,14 +23,21 @@ fetch("cards.json")
         </p>
 
         <p>
+          ${card.race} |
+          ${card.monsterType}
+        </p>
+
+        <p>
           ATK ${card.atk} /
           DEF ${card.def}
         </p>
 
-        <details class="effect-box">
-  <summary>Effect ˅</summary>
-  <p>${card.effect}</p>
-</details>
+        ${card.effect ? `
+          <details class="effect-box">
+            <summary>Effect ▼</summary>
+            <p>${card.effect}</p>
+          </details>
+        ` : ""}
       `;
 
       cardGrid.appendChild(cardElement);
