@@ -106,3 +106,26 @@ main {
 .discord-link {
   color: #8ea1ff;
 }
+#background-rotator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    width: 1200px;
+    height: 1200px;
+
+    transform: translate(-50%, -50%);
+
+    background-image: url("Images/Backgrounds/Dark_Magical_Circle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.10;
+
+    z-index: -1;
+
+    animation: slowSpin 600s linear infinite;
+
+    pointer-events: none;
+}
