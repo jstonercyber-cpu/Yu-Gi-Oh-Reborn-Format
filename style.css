@@ -1,8 +1,16 @@
 body {
+  position: relative;
   margin: 0;
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at top, #1b1b1b 0%, #050505 70%);
   color: white;
+}
+
+header,
+nav,
+main {
+  position: relative;
+  z-index: 1;
 }
 
 header {
@@ -78,6 +86,7 @@ main {
   font-size: 0.9rem;
   line-height: 1.35;
 }
+
 .main-nav {
   display: flex;
   justify-content: center;
@@ -106,41 +115,37 @@ main {
 .discord-link {
   color: #8ea1ff;
 }
+
 #background-rotator {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
 
-    width: 1200px;
-    height: 1200px;
+  width: 1200px;
+  height: 1200px;
 
-    transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
-    background-image: url("Images/Backgrounds/Dark_Magical_Circle.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  background-image: url("Images/Backgrounds/Dark_Magical_Circle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 
-    opacity: 0.10;
+  opacity: 0.10;
 
-    z-index: 0;
+  z-index: 0;
 
-    animation: slowSpin 600s linear infinite;
+  animation: slowSpin 600s linear infinite;
 
-    pointer-events: none;
+  pointer-events: none;
 }
+
 @keyframes slowSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 
-    from {
-        transform:
-            translate(-50%, -50%)
-            rotate(0deg);
-    }
-
-    to {
-        transform:
-            translate(-50%, -50%)
-            rotate(360deg);
-    }
-
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
