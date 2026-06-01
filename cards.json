@@ -64,7 +64,7 @@
     "def": 2000
   },
   {
-    "name": "Ancient One of the Deep Forest",
+    "name": "Ancient One Of The Deep Forest",
     "attribute": "EARTH",
     "race": "Beast",
     "monsterType": "Normal",
@@ -127,7 +127,7 @@
     "def": 1500
   },
   {
-    "name": "Mad Dog of Darkness",
+    "name": "Mad Dog Of Darkness",
     "attribute": "DARK",
     "race": "Beast",
     "monsterType": "Normal",
@@ -190,7 +190,7 @@
   "def": 1200
 },
 {
-  "name": "Gazelle the King of Mythical Beasts",
+  "name": "Gazelle The King Of Mythical Beasts",
   "attribute": "EARTH",
   "race": "Beast",
   "monsterType": "Normal",
@@ -424,7 +424,7 @@
     "def": 1200
   },
   {
-    "name": "Winged Dragon, Guardian of the Fortress #1",
+    "name": "Winged Dragon, Guardian Of The Fortress #1",
     "attribute": "WIND",
     "race": "Dragon",
     "monsterType": "Normal",
@@ -442,7 +442,7 @@
     "def": 1400
   },
   {
-    "name": "The Dragon Dwelling in the Cave",
+    "name": "The Dragon DwellingIn The Cave",
     "attribute": "WIND",
     "race": "Dragon",
     "monsterType": "Normal",
@@ -559,7 +559,7 @@
     "def": 800
   },
   {
-    "name": "Stinger the Electric Expeller",
+    "name": "Stinger The Electric Expeller",
     "attribute": "WIND",
     "race": "Thunder",
     "monsterType": "Normal",
