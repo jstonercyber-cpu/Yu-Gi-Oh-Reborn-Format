@@ -24,7 +24,7 @@ function getImagePath(card) {
 
   const fileName = card.name
     .replaceAll(" ", "_")
-    .replaceAll("#", "No_")
+    .replaceAll("#", "No")
     .replaceAll("&", "and")
     .replaceAll("'", "")
     .replaceAll(",", "");
