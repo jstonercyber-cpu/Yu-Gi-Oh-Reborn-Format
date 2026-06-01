@@ -21,7 +21,15 @@ fetch("cards.json")
   });
 
 function getImagePath(card) {
-  return `Images/Monsters/${card.name.replaceAll(" ", "_")}.jpg`;
+
+  const fileName = card.name
+    .replaceAll(" ", "_")
+    .replaceAll("#", "No_")
+    .replaceAll("&", "and")
+    .replaceAll("'", "")
+    .replaceAll(",", "");
+
+  return `Images/Monsters/${fileName}.jpg`;
 }
 
 function renderCards(cards) {
