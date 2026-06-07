@@ -654,7 +654,7 @@
     "effect": "Each time you or your opponent Normal Summons or Flip Summons a monster, increase your Life Points by 500 points."
   },
   {
-    "name": "Valkyrion the Magna Warrior",
+    "name": "Valkyrion The Magna Warrior",
     "attribute": "EARTH",
     "race": "Rock",
     "monsterType": "Effect",
@@ -674,7 +674,7 @@
     "effect": "If you control no other Insect-Type monsters, this card's ATK and DEF become 1000."
   },
   {
-    "name": "Gilford the Legend",
+    "name": "Gilford The Legend",
     "attribute": "EARTH",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -684,7 +684,7 @@
     "effect": "Cannot be Special Summoned. When this card is Normal Summoned: You can equip as many Equip Spell Cards from your Graveyard as possible to a Warrior-Type monster(s) you control."
   },
   {
-    "name": "Mahaama the Fairy Dragon",
+    "name": "Mahaama The Fairy Dragon",
     "attribute": "LIGHT",
     "race": "Dragon",
     "monsterType": "Effect",
@@ -694,7 +694,7 @@
     "effect": "During your opponent's turn, when either player takes battle damage: You can Special Summon this card from your hand, then apply 1 of these effects.\r\n● Gain LP equal to that battle damage.\r\n● Inflict damage to your opponent equal to that battle damage."
   },
   {
-    "name": "Gaia the Magical Knight",
+    "name": "Gaia The Magical Knight",
     "attribute": "LIGHT",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -831,7 +831,7 @@
     "level": 5,
     "atk": 1700,
     "def": 2000,
-    "effect": "You can flip this card into face-down Defense Position once per turn during your Main Phase. If the ATK of a monster on your opponent's side of the field that attacks this card in face-down Defense Position is lower than the DEF of this monster, the attacking monster is destroyed."
+    "effect": "You can flip this card into face-down Defense Position once per turn during your Main Phase. If the ATK of a monster on your opponent's side of the field that attacks this card in face-down Defense Position is lower than the DEF Of this monster, the attacking monster is destroyed."
   },
   {
     "name": "Great Phantom Thief",
@@ -874,7 +874,7 @@
     "effect": "You can send this face-up card you control to the Graveyard; Special Summon 1 \"Red-Eyes B. Dragon\" from your hand."
   },
   {
-    "name": "Breaker the Magical Warrior",
+    "name": "Breaker The Magical Warrior",
     "attribute": "DARK",
     "race": "Spellcaster",
     "monsterType": "Effect",
@@ -884,7 +884,7 @@
     "effect": "If this card is Normal Summoned: Place 1 Spell Counter on it (max. 1). Gains 300 ATK for each Spell Counter on it. You can remove 1 Spell Counter from this card, then target 1 Spell/Trap on the field; destroy that target."
   },
   {
-    "name": "Castle of Dark Illusions",
+    "name": "Castle Of Dark Illusions",
     "attribute": "DARK",
     "race": "Fiend",
     "monsterType": "Effect",
@@ -894,7 +894,7 @@
     "effect": "FLIP: All Zombie-Type monsters gain 200 ATK and DEF. During each of your next 4 Standby Phases, each of those Zombie-Type monsters gains 200 more ATK and DEF. These effects last as long as this card is face-up on the field."
   },
   {
-    "name": "Tristan, Knight of the Underworld",
+    "name": "Tristan, Knight Of The Underworld",
     "attribute": "DARK",
     "race": "Zombie",
     "monsterType": "Effect",
@@ -904,7 +904,7 @@
     "effect": "When this card is Normal Summoned: You can target 1 Zombie monster with 0 DEF in your GY; add it to your hand. Gains 300 ATK if you control another Zombie monster(s)."
   },
   {
-    "name": "Wall of Illusion",
+    "name": "Wall Of Illusion",
     "attribute": "DARK",
     "race": "Fiend",
     "monsterType": "Effect",
@@ -931,7 +931,7 @@
     "level": 6,
     "atk": 2000,
     "def": 1700,
-    "effect": "Gains 300 ATK for every \"Dark Magician\" or \"Magician of Black Chaos\" in the GYs."
+    "effect": "Gains 300 ATK for every \"Dark Magician\" or \"Magician Of Black Chaos\" in the GYs."
   },
   {
     "name": "Pandemonium Watchbear",
@@ -964,7 +964,7 @@
     "effect": "This card cannot attack the turn it is Normal Summoned."
   },
   {
-    "name": "Lord of D.",
+    "name": "Lord Of D.",
     "attribute": "DARK",
     "race": "Spellcaster",
     "monsterType": "Effect",
@@ -984,7 +984,7 @@
     "effect": "Once per turn, during your Standby Phase: You gain 200 LP. This card must be in the Graveyard to activate and to resolve this effect."
   },
   {
-    "name": "Gambler of Legend",
+    "name": "Gambler Of Legend",
     "attribute": "DARK",
     "race": "Spellcaster",
     "monsterType": "Effect",
@@ -1014,14 +1014,14 @@
     "effect": "During the End Phase, if this card is in the GY because it was destroyed on the field and sent there this turn: You can Special Summon this card, but its ATK/DEF become 1000. You can only use this effect of \"Twin-Headed Behemoth\" once per Duel."
   },
   {
-    "name": "Witch of the Black Forest",
+    "name": "Witch Of The Black Forest",
     "attribute": "DARK",
     "race": "Spellcaster",
     "monsterType": "Effect",
     "level": 4,
     "atk": 1100,
     "def": 1200,
-    "effect": "If this card is sent from the field to the GY: Add 1 monster with 1500 or less DEF from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of \"Witch of the Black Forest\" once per turn."
+    "effect": "If this card is sent from the field to the GY: Add 1 monster with 1500 or less DEF from your Deck to your hand, but you cannot activate cards, or the effects of cards, with that name for the rest of this turn. You can only use this effect of \"Witch Of the Black Forest\" once per turn."
   },
   {
     "name": "Dancing Fairy",
@@ -1064,7 +1064,7 @@
     "effect": "Your opponent cannot activate Trap Cards during the Battle Phase."
   },
   {
-    "name": "Pilgrim of the Ice Barrier",
+    "name": "Pilgrim Of The Ice Barrier",
     "attribute": "WATER",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1084,7 +1084,7 @@
     "effect": "When this card inflicts Battle Damage to your opponent's Life Points, draw 1 card from your Deck."
   },
   {
-    "name": "Jowls of Dark Demise",
+    "name": "Jowls Of Dark Demise",
     "attribute": "WATER",
     "race": "Fiend",
     "monsterType": "Effect",
@@ -1164,7 +1164,7 @@
     "effect": "As long as this card remains face-up on the field, monsters with an ATK equal to 1900 or more cannot declare an attack."
   },
   {
-    "name": "Gora Turtle of Illusion",
+    "name": "Gora Turtle Of Illusion",
     "attribute": "WATER",
     "race": "Aqua",
     "monsterType": "Effect",
@@ -1174,7 +1174,7 @@
     "effect": "Negate the effect of Spell and Trap Cards controlled by your opponent that target this face-up card on the field."
   },
   {
-    "name": "Freed the Matchless General",
+    "name": "Freed The Matchless General",
     "attribute": "EARTH",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1184,7 +1184,7 @@
     "effect": "Negate any Spell effect that targets this card on the field when it resolves, and if you do, destroy that card. During your Draw Phase, instead of conducting your normal draw: You can add 1 Level 4 or lower Warrior monster from your Deck to your hand. This card must be face-up on the field to activate and to resolve this effect."
   },
   {
-    "name": "Roc from the Valley of Haze",
+    "name": "Roc From The Valley Of Haze",
     "attribute": "WIND",
     "race": "Winged Beast",
     "monsterType": "Effect",
@@ -1224,7 +1224,7 @@
     "effect": "When this card is Normal Summoned: You can target 1 monster on the field; change that target to face-up Defense Position."
   },
   {
-    "name": "Spirit of the Breeze",
+    "name": "Spirit Of The Breeze",
     "attribute": "WIND",
     "race": "Fairy",
     "monsterType": "Effect",
@@ -1314,7 +1314,7 @@
     "effect": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves (max. 3). You can remove 3 Spell Counters from this card; draw 1 card."
   },
   {
-    "name": "Servant of Catabolism",
+    "name": "Servant Of Catabolism",
     "attribute": "LIGHT",
     "race": "Aqua",
     "monsterType": "Effect",
@@ -1324,7 +1324,7 @@
     "effect": "This monster may attack your opponent's Life Points directly."
   },
   {
-    "name": "Slifer the Sky Dragon",
+    "name": "Slifer The Sky Dragon",
     "attribute": "DIVINE",
     "race": "Divine-Beast",
     "monsterType": "Effect",
@@ -1334,7 +1334,7 @@
     "effect": "Requires 3 Tributes to Normal Summon (cannot be Normal Set). This card's Normal Summon cannot be negated. When Normal Summoned, cards and effects cannot be activated. Once per turn, during the End Phase, if this card was Special Summoned: Send it to the GY. Gains 1000 ATK/DEF for each card in your hand. If a monster(s) is Normal or Special Summoned to your opponent's field in Attack Position: That monster(s) loses 2000 ATK, then if its ATK has been reduced to 0 as a result, destroy it."
   },
   {
-    "name": "Black Luster Soldier - Envoy of the Beginning",
+    "name": "Black Luster Soldier - Envoy Of The Beginning",
     "attribute": "LIGHT",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1354,7 +1354,7 @@
     "effect": "Both players must keep their hands revealed."
   },
   {
-    "name": "Defender, the Magical Knight",
+    "name": "Defender, The Magical Knight",
     "attribute": "LIGHT",
     "race": "Spellcaster",
     "monsterType": "Effect",
@@ -1394,7 +1394,7 @@
     "effect": "When you Normal Summon this card, and during each of your Standby Phases, select 1 Set card on your opponent's side of the field. Pick it up and look at it, then return it to its original position."
   },
   {
-    "name": "Banisher of the Light",
+    "name": "Banisher Of The Light",
     "attribute": "LIGHT",
     "race": "Fairy",
     "monsterType": "Effect",
@@ -1464,7 +1464,7 @@
     "effect": "This card can attack your opponent's Life Points directly. Each time this card inflicts Battle Damage to your opponent's Life Points, increase the ATK of this card by 1000 points during your next Standby Phase. The ATK increase lasts as long as this card remains face-up on the field."
   },
   {
-    "name": "Zombyra the Dark",
+    "name": "Zombyra The Dark",
     "attribute": "DARK",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1504,7 +1504,7 @@
     "effect": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell Card resolves. This card gains 200 ATK for each Spell Counter on it. You can remove 2 Spell Counters from this card, then target 1 monster on the field; destroy that target."
   },
   {
-    "name": "Dark Scorpion - Chick the Yellow",
+    "name": "Dark Scorpion - Chick The Yellow",
     "attribute": "DARK",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1514,7 +1514,7 @@
     "effect": "When this card inflicts Battle Damage to your opponent, you can activate 1 of these effects:\n● Target 1 card on the field; return that target to the hand.\n● Look at the top card of their Deck, then return it to the top or bottom of the Deck."
   },
   {
-    "name": "Dark Scorpion - Gorg the Strong",
+    "name": "Dark Scorpion - Gorg The Strong",
     "attribute": "DARK",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1574,7 +1574,7 @@
     "effect": "If this card is Normal or Special Summoned: You can activate this effect; Special Summon 1 Level 3, 4, or 5 WATER monster from your hand in Defense Position, except \"Lantern Shark\", also, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Xyz Monsters. You can only use this effect of \"Lantern Shark\" once per turn. If this card is used for the Xyz Summon of a WATER monster, it can be treated as a Level 3 or 5 monster."
   },
   {
-    "name": "Gaia the Fierce Knight Origin",
+    "name": "Gaia The Fierce Knight Origin",
     "attribute": "EARTH",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1584,7 +1584,7 @@
     "effect": "This card can be treated as 2 Tributes for the Tribute Summon of a Warrior monster. You can only use each of the following effects of \"Gaia the Fierce Knight Origin\" once per turn. You can send 1 Level 5 or higher monster from your hand to the GY; Special Summon this card from your hand. During the Battle Phase (Quick Effect): You can banish this card from your GY, then target 1 monster on the field whose current ATK is different from its original ATK; its ATK becomes its original ATK."
   },
   {
-    "name": "Simorgh, Bird of Ancestry",
+    "name": "Simorgh, Bird Of Ancestry",
     "attribute": "WIND",
     "race": "Winged Beast",
     "monsterType": "Effect",
@@ -1704,7 +1704,7 @@
     "effect": "As long as this card remains face-up on the field, increase the ATK of all DARK monsters by 500 points and decrease the ATK of all LIGHT monsters by 400 points."
   },
   {
-    "name": "Obelisk the Tormentor",
+    "name": "Obelisk The Tormentor",
     "attribute": "DIVINE",
     "race": "Divine-Beast",
     "monsterType": "Effect",
@@ -1734,7 +1734,7 @@
     "effect": "A non Machine-Type Monster attacking \"Steel Scorpion\" will be destroyed at the End Phase of your opponent's 2nd turn after the attack."
   },
   {
-    "name": "4-Starred Ladybug of Doom",
+    "name": "4-Starred Ladybug Of Doom",
     "attribute": "WIND",
     "race": "Insect",
     "monsterType": "Effect",
@@ -1774,7 +1774,7 @@
     "effect": "This face-up card on the field is returned to the owner's hand during the End Phase of your turn."
   },
   {
-    "name": "Orgoth the Relentless",
+    "name": "Orgoth The Relentless",
     "attribute": "EARTH",
     "race": "Warrior",
     "monsterType": "Effect",
