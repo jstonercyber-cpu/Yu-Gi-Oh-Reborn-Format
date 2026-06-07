@@ -1234,7 +1234,7 @@
     "effect": "As long as this card remains in face-up Attack Position on your side of the field, increase your Life Points by 1000 points during each of your Standby Phases."
   },
   {
-    "name": "The Hunter with 7 Weapons",
+    "name": "The Hunter With 7 Weapons",
     "attribute": "EARTH",
     "race": "Warrior",
     "monsterType": "Effect",
@@ -1384,7 +1384,7 @@
     "effect": "Monsters your opponent controls cannot target face-up Spellcaster-Type monsters for attacks, except this one."
   },
   {
-    "name": "A Man with Wdjat",
+    "name": "A Man With Wdjat",
     "attribute": "DARK",
     "race": "Spellcaster",
     "monsterType": "Effect",
