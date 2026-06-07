@@ -10,7 +10,10 @@ const monsterTypeFilter = document.getElementById("monsterTypeFilter");
 const raceFilter = document.getElementById("raceFilter");
 const levelFilter = document.getElementById("levelFilter");
 
+const navTabs = document.querySelectorAll(".nav-tab");
+
 let allCards = [];
+let currentCategory = "Home";
 
 fetch("cards.json")
   .then(response => response.json())
@@ -20,7 +23,17 @@ fetch("cards.json")
     applySearchAndFilters();
   });
 
+function getCardCategory(card) {
+  return card.category || "Monster";
+}
+
 function getImagePath(card) {
+  const category = getCardCategory(card);
+
+  const folder =
+    category === "Spell" ? "Spells" :
+    category === "Trap" ? "Traps" :
+    "Monsters";
 
   const fileName = card.name
     .replaceAll(" ", "_")
@@ -29,11 +42,16 @@ function getImagePath(card) {
     .replaceAll("'", "")
     .replaceAll(",", "");
 
-  return `Images/Monsters/${fileName}.jpg`;
+  return `Images/${folder}/${fileName}.jpg`;
 }
 
 function renderCards(cards) {
   cardGrid.innerHTML = "";
+
+  if (cards.length === 0) {
+    cardGrid.innerHTML = `<p class="no-results">No cards found.</p>`;
+    return;
+  }
 
   cards.forEach(card => {
     const imagePath = getImagePath(card);
@@ -47,19 +65,20 @@ function renderCards(cards) {
       <h2>${card.name}</h2>
 
       <p>
-        ${card.level ? `Level ${card.level}` : "Level ?"} |
-        ${card.attribute || "Attribute ?"}
+        ${card.level ? `Level ${card.level}` : getCardCategory(card)} |
+        ${card.attribute || ""}
       </p>
 
       <p>
-        ${card.race || "Race ?"} |
-        ${card.monsterType || "Type ?"}
+        ${card.race || ""} 
+        ${card.monsterType ? `| ${card.monsterType}` : ""}
       </p>
 
-      <p>
-        ATK ${card.atk ?? "?"} /
-        DEF ${card.def ?? "?"}
-      </p>
+      ${
+        card.atk !== undefined || card.def !== undefined
+          ? `<p>ATK ${card.atk ?? "?"} / DEF ${card.def ?? "?"}</p>`
+          : ""
+      }
 
       ${card.effect ? `
         <details class="effect-box">
@@ -94,8 +113,14 @@ function applySearchAndFilters() {
   const searchTerm = searchBox.value.toLowerCase().trim();
 
   let filteredCards = allCards.filter(card => {
+    const category = getCardCategory(card);
+
+    const matchesCategory =
+      currentCategory === "Home" || category === currentCategory;
+
     const searchableText = `
       ${card.name || ""}
+      ${card.category || ""}
       ${card.attribute || ""}
       ${card.race || ""}
       ${card.monsterType || ""}
@@ -120,6 +145,7 @@ function applySearchAndFilters() {
       !levelFilter.value || String(card.level) === String(levelFilter.value);
 
     return (
+      matchesCategory &&
       matchesSearch &&
       matchesAttribute &&
       matchesMonsterType &&
@@ -129,7 +155,6 @@ function applySearchAndFilters() {
   });
 
   sortCards(filteredCards);
-
   renderCards(filteredCards);
 }
 
@@ -152,6 +177,34 @@ function sortCards(cards) {
     return 0;
   });
 }
+
+function setTheme(category) {
+  document.body.classList.remove("theme-home", "theme-monster", "theme-spell", "theme-trap");
+
+  if (category === "Monster") {
+    document.body.classList.add("theme-monster");
+  } else if (category === "Spell") {
+    document.body.classList.add("theme-spell");
+  } else if (category === "Trap") {
+    document.body.classList.add("theme-trap");
+  } else {
+    document.body.classList.add("theme-home");
+  }
+}
+
+navTabs.forEach(tab => {
+  tab.addEventListener("click", event => {
+    event.preventDefault();
+
+    currentCategory = tab.dataset.category;
+
+    navTabs.forEach(t => t.classList.remove("active-tab"));
+    tab.classList.add("active-tab");
+
+    setTheme(currentCategory);
+    applySearchAndFilters();
+  });
+});
 
 searchButton.addEventListener("click", applySearchAndFilters);
 
