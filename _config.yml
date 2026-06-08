@@ -1,0 +1,14 @@
+# Yu-Gi-Oh Reborn Format — site configuration
+title: Yu-Gi-Oh Reborn Format
+description: A fan-made searchable library for the Reborn Format cube.
+
+# IMPORTANT: this site is served from the apex custom domain in CNAME
+# (yugioh-reborn.com), so baseurl MUST stay empty. Setting it to a project
+# path would break every link and image. Leave this alone unless the domain
+# changes to a "username.github.io/project" style URL.
+baseurl: ""
+url: "https://yugioh-reborn.com"
+
+# Keep Jekyll from copying things it shouldn't process.
+exclude:
+  - README.md
