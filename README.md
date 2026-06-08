@@ -2,7 +2,7 @@
 
 A fan-made GitHub Pages site for the Reborn Format cube: a searchable card library
 plus rules and drafting info. Built with plain HTML/CSS/JS and **Jekyll includes**
-(no frameworks).
+(no frameworks). 
 
 ## Structure
 
