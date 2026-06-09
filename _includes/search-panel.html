@@ -1,0 +1,49 @@
+<section class="search-panel">
+  <div class="search-row">
+    <input id="searchBox" type="text" placeholder="Search cards..." />
+    <button id="searchButton">Search</button>
+  </div>
+
+  <div class="filter-row">
+    <select id="sortSelect">
+      <option value="name">Alphabetical</option>
+      {% if page.category == 'Monster' %}
+      <option value="atk">Attack</option>
+      <option value="def">Defense</option>
+      <option value="attribute">Attribute</option>
+      <option value="race">Race</option>
+      <option value="monsterType">Monster Type</option>
+      <option value="level">Level</option>
+      {% endif %}
+    </select>
+
+    <select id="directionSelect">
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+
+    {% if page.category == 'Monster' %}
+    <select id="attributeFilter">
+      <option value="">All Attributes</option>
+    </select>
+
+    <select id="monsterTypeFilter">
+      <option value="">Normal &amp; Effect</option>
+      <option value="Normal">Normal</option>
+      <option value="Effect">Effect</option>
+    </select>
+
+    <select id="raceFilter">
+      <option value="">All Races</option>
+    </select>
+
+    <select id="levelFilter">
+      <option value="">All Levels</option>
+    </select>
+    {% endif %}
+
+    <button id="clearButton">Clear</button>
+  </div>
+</section>
+
+<section id="cardGrid" class="card-grid" data-category="{{ page.category }}"></section>
