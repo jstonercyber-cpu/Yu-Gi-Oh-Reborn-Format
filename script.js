@@ -238,7 +238,7 @@ if (ring && ringBanner) {
     if (Math.abs(rel) < DEAD_ZONE) {
       velocity = 0;                             // center -> pause
     } else {
-      velocity = (rel / 0.5) * MAX_SPEED;       // left -> CCW, right -> CW, scaled by distance
+      velocity = -(rel / 0.5) * MAX_SPEED;       // left -> CCW, right -> CW, scaled by distance
     }
   });
 
