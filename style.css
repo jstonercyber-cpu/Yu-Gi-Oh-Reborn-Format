@@ -440,3 +440,114 @@ header {
   margin: 0 auto;
   line-height: 1.4;
 }
+
+/* ============================================================
+   3D rotating card ring (homepage hero menu)
+   CSS-only, inspired by the Lun Dev 3D slider technique.
+   ============================================================ */
+
+.card-ring-banner {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  margin: 1.5rem 0 1rem;
+  overflow: hidden;
+  perspective: 1200px;
+  /* --radius controls how far each card sits from the center axis */
+  --radius: 330px;
+}
+
+.card-ring {
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 80px);
+  width: 160px;
+  height: 230px;
+  transform-style: preserve-3d;
+  animation: ringSpin 34s linear infinite;
+}
+
+@keyframes ringSpin {
+  from { transform: rotateX(-12deg) rotateY(0deg); }
+  to   { transform: rotateX(-12deg) rotateY(360deg); }
+}
+
+/* Pause the whole ring while the user is choosing */
+.card-ring:hover { animation-play-state: paused; }
+
+.ring-card {
+  position: absolute;
+  inset: 0;
+  text-decoration: none;
+  transform:
+    rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(var(--radius));
+}
+
+.ring-card-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #d6b400;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(#1a1a1a, #000);
+  box-shadow: 0 0 18px rgba(214, 180, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.ring-card-inner img {
+  width: 100%;
+  height: 76%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.ring-card-label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  color: #ffd700;
+  text-shadow: 0 0 6px #000;
+  background: linear-gradient(#101010, #1d1d1d);
+}
+
+.ring-card:hover .ring-card-inner {
+  box-shadow: 0 0 30px rgba(214, 180, 0, 0.95);
+  transform: scale(1.05);
+}
+
+/* Per-section card colors (mirror the page themes) */
+.card-spell  { border-color: #2ecc71; box-shadow: 0 0 18px rgba(46,204,113,0.5); }
+.card-spell  .ring-card-label { color: #2ecc71; }
+.card-trap   { border-color: #9b59b6; box-shadow: 0 0 18px rgba(155,89,182,0.5); }
+.card-trap   .ring-card-label { color: #b07cc6; }
+.card-discord{ border-color: #8ea1ff; box-shadow: 0 0 18px rgba(142,161,255,0.5); }
+.card-discord .ring-card-label { color: #8ea1ff; }
+
+.ring-hint {
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin: 0 0 2.5rem;
+}
+
+/* Smaller screens: tighten the ring so it fits */
+@media (max-width: 600px) {
+  .card-ring-banner { height: 320px; perspective: 900px; --radius: 215px; }
+  .card-ring { width: 130px; height: 185px; left: calc(50% - 65px); top: 16%; }
+  .ring-card-label { font-size: 0.9rem; }
+}
+
+/* Respect users who prefer reduced motion: stop spinning, keep the tilt */
+@media (prefers-reduced-motion: reduce) {
+  .card-ring { animation: none; transform: rotateX(-12deg); }
+}
