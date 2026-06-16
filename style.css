@@ -468,8 +468,8 @@ header {
 }
 
 @keyframes ringSpin {
-  from { transform: rotateX(-12deg) rotateY(0deg); }
-  to   { transform: rotateX(-12deg) rotateY(360deg); }
+  from { transform: rotateX(-16deg) rotateY(0deg); }
+  to   { transform: rotateX(-16deg) rotateY(360deg); }
 }
 
 /* Pause the whole ring while the user is choosing */
@@ -549,5 +549,5 @@ header {
 
 /* Respect users who prefer reduced motion: stop spinning, keep the tilt */
 @media (prefers-reduced-motion: reduce) {
-  .card-ring { animation: none; transform: rotateX(-12deg); }
+  .card-ring { animation: none; transform: rotateX(-16deg); }
 }
