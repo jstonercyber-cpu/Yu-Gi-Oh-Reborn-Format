@@ -205,3 +205,51 @@ if (cardGrid) {
     });
   }
 }
+
+// ============================================================
+// Homepage rotating card ring — mouse position controls it.
+//   left side  -> spins counter-clockwise
+//   center     -> pauses
+//   right side -> spins clockwise
+//   mouse away -> gentle auto-spin
+// Runs only on pages that have the ring (the homepage).
+// ============================================================
+
+const ring = document.querySelector(".card-ring");
+const ringBanner = document.querySelector(".card-ring-banner");
+
+if (ring && ringBanner) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Take over from the CSS keyframe spin so JS can steer it.
+  ring.style.animation = "none";
+
+  const TILT = -16;                            // must match the CSS tilt
+  const IDLE_SPEED = reduceMotion ? 0 : 0.18;  // deg/frame when mouse is away
+  const MAX_SPEED = 1.4;                        // top speed at the far edges
+  const DEAD_ZONE = 0.07;                       // middle fraction that means "pause"
+
+  let angle = 0;
+  let velocity = IDLE_SPEED;
+
+  ringBanner.addEventListener("mousemove", (event) => {
+    const rect = ringBanner.getBoundingClientRect();
+    const rel = (event.clientX - rect.left) / rect.width - 0.5; // -0.5 left .. +0.5 right
+    if (Math.abs(rel) < DEAD_ZONE) {
+      velocity = 0;                             // center -> pause
+    } else {
+      velocity = (rel / 0.5) * MAX_SPEED;       // left -> CCW, right -> CW, scaled by distance
+    }
+  });
+
+  ringBanner.addEventListener("mouseleave", () => {
+    velocity = IDLE_SPEED;                      // resume gentle auto-spin
+  });
+
+  function tick() {
+    angle += velocity;
+    ring.style.transform = `rotateX(${TILT}deg) rotateY(${angle}deg)`;
+    requestAnimationFrame(tick);
+  }
+  tick();
+}
