@@ -101,3 +101,25 @@ tagline: "A fan-made cube library in the spirit of the Duelist Kingdom era."
     <p>Once you're ready, drag your closest friends kicking and screaming to your local game store to play a game they've been trying to forget ever since it broke their heart.</p>
   </div>
 </section>
+
+<section class="konami-zone" aria-label="A mysterious controller">
+  <div class="controller" id="controller">
+    <!-- Invisible buttons sit on top of the Enemy Controller art.
+         Nudge each one's position in style.css (.ctrl-up, .ctrl-down, etc.). -->
+    <button class="ctrl-btn ctrl-up"    data-key="up"    aria-label="Up"></button>
+    <button class="ctrl-btn ctrl-down"  data-key="down"  aria-label="Down"></button>
+    <button class="ctrl-btn ctrl-left"  data-key="left"  aria-label="Left"></button>
+    <button class="ctrl-btn ctrl-right" data-key="right" aria-label="Right"></button>
+    <button class="ctrl-btn ctrl-a"     data-key="a"     aria-label="A"></button>
+    <button class="ctrl-btn ctrl-b"     data-key="b"     aria-label="B"></button>
+    <button class="ctrl-btn ctrl-start" data-key="start" aria-label="Start"></button>
+  </div>
+
+  <div class="konami-video" id="konamiVideo" hidden>
+    <button class="konami-close" id="konamiClose" aria-label="Close video">&times;</button>
+    <div class="konami-frame-wrap">
+      <iframe id="konamiFrame" title="Secret video" src="" frameborder="0"
+              allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>

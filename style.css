@@ -694,3 +694,92 @@ header {
 @media (max-width: 600px) {
   .banner-popout { --pop-height: 150%; }
 }
+
+/* ============================================================
+   Enemy Controller easter egg (Konami code -> YouTube reveal)
+   ------------------------------------------------------------
+   1. Add your controller image at:
+        Images/Backgrounds/enemy_controller.png
+   2. Hotspots below are already measured to that image.
+   3. Set the video in script.js (KONAMI_VIDEO_ID).
+   ============================================================ */
+.konami-zone {
+  max-width: 760px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.controller {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  aspect-ratio: 489 / 427;      /* matches your enemy_controller.png */
+  background: url('Images/Backgrounds/enemy_controller.png') center/contain no-repeat;
+}
+
+.ctrl-btn {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12%;
+  transition: background 0.08s ease, box-shadow 0.08s ease, transform 0.08s ease;
+}
+.ctrl-btn:hover {
+  background: rgba(214, 180, 0, 0.18);
+  box-shadow: 0 0 14px 3px rgba(214, 180, 0, 0.55);
+}
+.ctrl-btn:active,
+.ctrl-btn.flash {            /* .flash is added briefly on keyboard presses too */
+  background: rgba(214, 180, 0, 0.42);
+  box-shadow: 0 0 18px 5px rgba(214, 180, 0, 0.9);
+  transform: scale(0.94);
+}
+
+/* ---- Measured to match your enemy_controller.png ---- */
+.ctrl-up    { top: 12%; left: 22%; width: 12%; height: 14%; }
+.ctrl-down  { top: 33%; left: 22%; width: 12%; height: 12%; }
+.ctrl-left  { top: 24%; left: 11%; width: 12%; height: 12%; }
+.ctrl-right { top: 24%; left: 33%; width: 11%; height: 12%; }
+.ctrl-a     { top: 26%; left: 60%; width: 10%; height: 11%; border-radius: 50%; }
+.ctrl-b     { top: 35%; left: 69%; width: 10%; height: 11%; border-radius: 50%; }
+.ctrl-start { top: 38%; left: 50%; width: 10%; height: 11%; border-radius: 50%; }
+
+/* The revealed video */
+.konami-video { position: relative; max-width: 760px; margin: 0 auto; }
+.konami-frame-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;           /* 16:9 */
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 16px var(--accent-glow);
+  overflow: hidden;
+}
+.konami-frame-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.konami-close {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  z-index: 6;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: #0a0a0a;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.konami-close:hover { background: var(--accent-glow); }

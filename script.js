@@ -244,3 +244,79 @@ if (ring && ringBanner) {
   }
   tick();
 }
+
+// ============================================================
+// Enemy Controller easter egg.
+// Press the controller buttons (or keys) in the order
+//   up, up, down, down, left, right, left, right, B, A, Start
+// and the controller fades out to reveal a YouTube video.
+// Keyboard: arrows + B + A + Enter (= Start).
+// Runs only on the homepage (where #controller exists).
+// ============================================================
+
+const controller = document.getElementById("controller");
+
+if (controller) {
+  // ---- CHANGE THIS to your video. It's the part of a YouTube
+  // ---- link after "v=" :  youtube.com/watch?v=XXXXXXXXXXX
+  const KONAMI_VIDEO_ID = "dQw4w9WgXcQ";
+
+  const KONAMI = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "start"];
+  let progress = [];
+
+  function flash(key) {
+    const el = controller.querySelector(`.ctrl-btn[data-key="${key}"]`);
+    if (!el) return;
+    el.classList.add("flash");
+    setTimeout(() => el.classList.remove("flash"), 150);
+  }
+
+  function press(key) {
+    flash(key);                         // light up the matching button
+    progress.push(key);
+    progress = progress.slice(-KONAMI.length);
+    if (progress.join(",") === KONAMI.join(",")) {
+      progress = [];
+      revealVideo();
+    }
+  }
+
+  // Clicking the on-screen controller buttons
+  controller.querySelectorAll(".ctrl-btn").forEach((btn) => {
+    btn.addEventListener("click", () => { press(btn.dataset.key); btn.blur(); });
+  });
+
+  // Keyboard works too (Enter = Start)
+  const keyMap = {
+    ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right",
+    KeyB: "b", KeyA: "a", Enter: "start", NumpadEnter: "start"
+  };
+  document.addEventListener("keydown", (event) => {
+    const key = keyMap[event.code];
+    if (key) press(key);
+  });
+
+  function revealVideo() {
+    const videoBox = document.getElementById("konamiVideo");
+    const frame = document.getElementById("konamiFrame");
+    controller.style.transition = "opacity 0.6s ease";
+    controller.style.opacity = "0";
+    setTimeout(() => {
+      controller.hidden = true;
+      frame.src = `https://www.youtube.com/embed/${KONAMI_VIDEO_ID}?autoplay=1`;
+      videoBox.hidden = false;
+    }, 600);
+  }
+
+  const closeBtn = document.getElementById("konamiClose");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      const videoBox = document.getElementById("konamiVideo");
+      const frame = document.getElementById("konamiFrame");
+      frame.src = "";              // stops playback
+      videoBox.hidden = true;
+      controller.hidden = false;
+      controller.style.opacity = "1";
+    });
+  }
+}
