@@ -726,7 +726,7 @@ header {
   border: 0;
   background: transparent;
   cursor: pointer;
-  border-radius: 12%;
+  border-radius: 50%;
   transition: background 0.08s ease, box-shadow 0.08s ease, transform 0.08s ease;
 }
 .ctrl-btn:hover {
@@ -741,13 +741,13 @@ header {
 }
 
 /* ---- Measured to match your enemy_controller.png ---- */
-.ctrl-up    { top: 12%; left: 22%; width: 12%; height: 14%; }
-.ctrl-down  { top: 33%; left: 22%; width: 12%; height: 12%; }
-.ctrl-left  { top: 24%; left: 11%; width: 12%; height: 12%; }
-.ctrl-right { top: 24%; left: 33%; width: 11%; height: 12%; }
-.ctrl-a     { top: 26%; left: 60%; width: 10%; height: 11%; border-radius: 50%; }
-.ctrl-b     { top: 35%; left: 69%; width: 10%; height: 11%; border-radius: 50%; }
-.ctrl-start { top: 38%; left: 50%; width: 10%; height: 11%; border-radius: 50%; }
+.ctrl-up    { top: 18.9%; left: 22.2%; width: 11%; height: 12.6%; }
+.ctrl-down  { top: 33.1%; left: 22.2%; width: 11%; height: 12.6%; }
+.ctrl-left  { top: 26%;   left: 14.7%; width: 11%; height: 12.6%; }
+.ctrl-right { top: 26%;   left: 29.7%; width: 11%; height: 12.6%; }
+.ctrl-a     { top: 26%;   left: 61%;   width: 9%;  height: 10.3%; }
+.ctrl-b     { top: 35%;   left: 69%;   width: 9%;  height: 10.3%; }
+.ctrl-start { top: 38%;   left: 51%;   width: 9%;  height: 10.3%; }
 
 /* The revealed video */
 .konami-video { position: relative; max-width: 760px; margin: 0 auto; }
