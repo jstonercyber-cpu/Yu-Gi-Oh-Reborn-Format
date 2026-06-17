@@ -662,40 +662,35 @@ header {
 
 /* ------------------------------------------------------------
    Banner "pop-out" overlay (the 3D breakout effect).
-   Provide a TRANSPARENT .png cut-out of just the subject:
-     Images/Backgrounds/intro_popout.png
-     Images/Backgrounds/howtoplay_popout.png
-   It is anchored to the bottom inside the banner and is taller
-   than the banner, so its top spills out over the frame.
+   The <img> is a TRANSPARENT .png cut-out of just the subject.
+   It stands on the banner's bottom edge and is taller than the
+   banner, so its top (and sides, if wide) spill out of the frame.
 
-   Tune the fit with the three variables below per banner:
-     --pop-width   how wide the cut-out is (% of banner width)
-     --pop-height  how tall (over 100% = pokes out the top)
+   Tune it with two variables:
+     --pop-height  how tall the image is (over 100% = pokes out
+                   the top of the banner; bigger = bigger + higher)
      --pop-x       horizontal position (50% = centered;
                    lower = toward left, higher = toward right)
+
+   TIP: for it to fill nicely, the .png should be cropped tight to
+   the subject (little or no empty space around it).
    ------------------------------------------------------------ */
 .banner-popout {
-  --pop-width: 45%;
-  --pop-height: 150%;
+  --pop-height: 165%;
   --pop-x: 50%;
 
   position: absolute;
   left: var(--pop-x);
-  bottom: 0;                       /* sits flush on the banner's bottom */
-  width: var(--pop-width);
-  height: var(--pop-height);
+  bottom: 0;                       /* stands on the banner's bottom edge */
+  height: var(--pop-height);       /* taller than banner -> spills out the top */
+  width: auto;                     /* keep the image's natural proportions */
+  max-width: none;
   transform: translateX(-50%);
-  background-size: contain;
-  background-position: bottom center;
-  background-repeat: no-repeat;
   pointer-events: none;
   z-index: 5;                      /* float above the banner and neighbors */
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.6));
 }
 
-.popout-intro { background-image: url('Images/Backgrounds/intro_popout.png'); }
-.popout-howto { background-image: url('Images/Backgrounds/howtoplay_popout.png'); }
-
 @media (max-width: 600px) {
-  .banner-popout { --pop-width: 55%; --pop-height: 140%; }
+  .banner-popout { --pop-height: 150%; }
 }
