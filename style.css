@@ -551,3 +551,109 @@ header {
 @media (prefers-reduced-motion: reduce) {
   .card-ring { animation: none; transform: rotateX(-16deg); }
 }
+
+/* ============================================================
+   Homepage feature sections (Reborn intro + How to play)
+   ============================================================ */
+
+.reborn-feature {
+  max-width: 880px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Banner image at the top of each section.
+   Drop your images here (same size, full width):
+     Images/Backgrounds/intro_banner.jpg
+     Images/Backgrounds/howtoplay_banner.jpg
+   Until then, a dark gradient shows in their place. */
+.feature-banner {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 1.75rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 14px var(--accent-glow);
+  background-size: cover;
+  background-position: center;
+}
+.banner-intro {
+  background-image: url('Images/Backgrounds/intro_banner.jpg'),
+                    linear-gradient(135deg, #1c1c1c, #0a0a0a);
+}
+.banner-howto {
+  background-image: url('Images/Backgrounds/howtoplay_banner.jpg'),
+                    linear-gradient(135deg, #1c1c1c, #0a0a0a);
+}
+
+.feature-body p {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+}
+
+.feature-lead {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-shadow: 0 0 8px #000;
+}
+
+/* Text + card side by side */
+.feature-split {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin: 1.5rem 0;
+}
+.feature-text { flex: 1; }
+.feature-text p { margin: 0; }
+
+.feature-card {
+  flex: 0 0 auto;
+  width: 210px;
+  margin: 0;
+  text-align: center;
+}
+.feature-card img {
+  display: block;
+  width: 100%;
+  border: 3px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 18px var(--accent-glow);
+}
+.feature-card figcaption {
+  margin-top: 0.5rem;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+/* The big shout lines */
+.feature-shout {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-shadow: 0 0 8px #000;
+  line-height: 1.4;
+}
+
+/* The closing creed line */
+.feature-creed {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--accent);
+  text-shadow: 0 0 8px #000;
+  margin-top: 1.75rem;
+}
+.feature-creed em { font-style: italic; }
+
+@media (max-width: 600px) {
+  .feature-banner { height: 160px; }
+  .feature-split { flex-direction: column; gap: 1rem; }
+  .feature-card { width: 65%; max-width: 220px; }
+}
