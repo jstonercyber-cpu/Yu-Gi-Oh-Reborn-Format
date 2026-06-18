@@ -751,11 +751,11 @@ header {
 
 /* ---- Measured to match your enemy_controller.png ---- */
 .ctrl-up    { top: 18.9%; left: 27.5%; width: 11%; height: 12.6%; }
-.ctrl-down  { top: 33.1%; left: 27.5%; width: 11%; height: 12.6%; }
-.ctrl-left  { top: 26%;   left: 20%; width: 11%; height: 12.6%; }
-.ctrl-right { top: 26%;   left: 33%; width: 11%; height: 12.6%; }
+.ctrl-down  { top: 33.1%; left: 26.5%; width: 11%; height: 12.6%; }
+.ctrl-left  { top: 25%;   left: 20%; width: 11%; height: 12.6%; }
+.ctrl-right { top: 27%;   left: 33%; width: 11%; height: 12.6%; }
 .ctrl-a     { top: 26%;   left: 61%;   width: 9%;  height: 10.3%; }
-.ctrl-b     { top: 35%;   left: 69%;   width: 9%;  height: 10.3%; }
+.ctrl-b     { top: 34.5%;   left: 69%;   width: 9%;  height: 10.3%; }
 .ctrl-start { top: 38%;   left: 51%;   width: 9%;  height: 10.3%; }
 .ctrl-c     { top: 44.5%; left: 80%; width: 9%;  height: 10.3%; }
 
