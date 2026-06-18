@@ -289,7 +289,7 @@ if (controller) {
   // Keyboard works too (Enter = Start)
   const keyMap = {
     ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right",
-    KeyB: "b", KeyA: "a", Enter: "start", NumpadEnter: "start"
+    KeyB: "b", KeyA: "a", KeyC: "c", Enter: "start", NumpadEnter: "start"
   };
   document.addEventListener("keydown", (event) => {
     const key = keyMap[event.code];

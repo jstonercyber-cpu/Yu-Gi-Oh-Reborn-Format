@@ -540,11 +540,21 @@ header {
   margin: 0 0 2.5rem;
 }
 
-/* Smaller screens: tighten the ring so it fits */
+/* Smaller screens: size the ring relative to screen width so it always fits */
 @media (max-width: 600px) {
-  .card-ring-banner { height: 440px; perspective: 900px; --radius: 215px; }
-  .card-ring { width: 130px; height: 185px; left: calc(50% - 65px); top: 16%; }
-  .ring-card-label { font-size: 0.9rem; }
+  .card-ring-banner {
+    height: 92vw;
+    max-height: 420px;
+    perspective: 800px;
+    --radius: 34vw;               /* ring distance scales with the screen */
+  }
+  .card-ring {
+    width: 26vw;
+    height: 37vw;
+    left: calc(50% - 13vw);
+    top: 12%;
+  }
+  .ring-card-label { font-size: 3.2vw; }
 }
 
 /* Respect users who prefer reduced motion: stop spinning, keep the tilt */
@@ -715,9 +725,8 @@ header {
   width: 100%;
   max-width: 380px;
   margin: 0 auto;
-  aspect-ratio: 489 / 427;      /* matches your enemy_controller.png */
-  background: url('Images/Backgrounds/enemy_controller.png') center/contain no-repeat;
 }
+.controller-img { display: block; width: 100%; height: auto; }
 
 .ctrl-btn {
   position: absolute;
@@ -748,6 +757,7 @@ header {
 .ctrl-a     { top: 26%;   left: 61%;   width: 9%;  height: 10.3%; }
 .ctrl-b     { top: 35%;   left: 69%;   width: 9%;  height: 10.3%; }
 .ctrl-start { top: 38%;   left: 51%;   width: 9%;  height: 10.3%; }
+.ctrl-c     { top: 45.1%; left: 76.6%; width: 9%;  height: 10.3%; }
 
 /* The revealed video */
 .konami-video { position: relative; max-width: 760px; margin: 0 auto; }
